@@ -19,8 +19,8 @@ We have implemented our CVHSSR method through the [NAFNet](https://github.com/me
 
 <table>
     <tr>
-        <td ><center><img src="./figures/network2.png" > CHIMB </center></td>
-        <td ><center><img src="./figures/network3.png" > CVIM</center></td>
+        <td ><center><img src="./figures/network2.png" > </center></td>
+        <td ><center><img src="./figures/network3.png" > </center></td>
     </tr>
 </table>
 
