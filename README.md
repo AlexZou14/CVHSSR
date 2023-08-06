@@ -3,7 +3,7 @@ The official pytorch implementation of the paper Cross-View Hierarchy Network fo
 
 Wenbin Zou, Hongxia Gao* , Liang Chen, Yunchen Zhang, Mingchao Jiang, Zhongxin Yu, Ming Tan
 
-![Param](./figures/network1.png)
+![Param](./figures/CPParamVSPSNR.png)
 
 ## Introduction
 
