@@ -3,16 +3,26 @@ The official pytorch implementation of the paper Cross-View Hierarchy Network fo
 
 Wenbin Zou, Hongxia Gao* , Liang Chen, Yunchen Zhang, Mingchao Jiang, Zhongxin Yu, Ming Tan
 
+<center>
+<img src="./figures/CPParamVSPSNR.png" width=600/>
+</center>
+
+
 ## Introduction
 
 We have implemented our CVHSSR method through the [NAFNet](https://github.com/megvii-research/NAFNet) algorithm framework. Next, we will describe the main processes of training and testing.
 
-- Paper The SCET has been accepted by CVPRW2023, you can read the [paper](http://arxiv.org/abs/2304.06236) here.
+- Paper The CVHSSR has been accepted by CVPRW2023, you can read the [paper](http://arxiv.org/abs/2304.06236) here.
 - Model
 
 ![Network](./figures/network1.png)
-![Network2](./figures/network2.png)
-![Network3](./figures/network3.png)
+
+<table>
+    <tr>
+        <td ><center><img src="./figures/network2.png" > </center></td>
+        <td ><center><img src="./figures/network3.png" > </center></td>
+    </tr>
+</table>
 
 ## How to use the code to train CVHSSR network.
 1. Installation environment
@@ -23,7 +33,7 @@ cuda 11.3
 ```
 
 ```
-git clone https://github.com/AlexZou14/CVHSSR
+git clone https://github.com/AlexZou14/CVHSSR.git
 cd CVHSSR
 pip install -r requirements.txt
 python setup.py develop --no_cuda_ext
@@ -88,13 +98,13 @@ pretrain_network_g: ./CVHSSR_Sx4.pth # replace your model checkpoint path
 CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 --master_port=4329 basicsr/train.py -opt ./options/train/CVHSSR_Sx4.yml --launcher pytorch
 ```
 
-5. train SCET network, as follows:
+5. train CVHSSR network, as follows:
 ```
-cd SCET
+cd CVHSSR
 
 bash train.sh
 ```
-## How to use the code to test SCET network.
+## How to use the code to test CVHSSR network.
 
 ```
 # modify the config path, checkpoint path.
