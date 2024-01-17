@@ -4,8 +4,8 @@
 # Modified from BasicSR (https://github.com/xinntao/BasicSR)
 # Copyright 2018-2020 BasicSR Authors
 # ------------------------------------------------------------------------
-from .losses import (L1Loss, MSELoss, PSNRLoss, SSIMLoss, MS_SSIMLoss, CharbonnierLoss, ComposeLoss)
+from .losses import (L1Loss, MSELoss, PSNRLoss, SSIMLoss, MS_SSIMLoss, CharbonnierLoss, ComposeLoss, TVLoss)
 
 __all__ = [
-    'L1Loss', 'MSELoss', 'PSNRLoss', 'SSIMLoss', 'MS_SSIMLoss', 'CharbonnierLoss', 'ComposeLoss'
+    'L1Loss', 'MSELoss', 'PSNRLoss', 'SSIMLoss', 'MS_SSIMLoss', 'CharbonnierLoss', 'ComposeLoss', 'TVLoss'
 ]

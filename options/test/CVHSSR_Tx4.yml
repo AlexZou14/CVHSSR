@@ -16,32 +16,32 @@ datasets:
   test0:
     name: KITTI2012
     type: PairedStereoImageDataset
-    dataroot_gt: ./data/Flickr1024/Stereo_test/KITTI2012/hr
-    dataroot_lq: ./data/Flickr1024/Stereo_test/KITTI2012/lr_x4
+    dataroot_gt: /home/h11ssl-i/data/Stereo_test/KITTI2012/hr
+    dataroot_lq: /home/h11ssl-i/data/Stereo_test/KITTI2012/lr_x4
     io_backend:
       type: disk
 
   test1:
     name: KITTI2015
     type: PairedStereoImageDataset
-    dataroot_gt: ./data/Flickr1024/Stereo_test/KITTI2015/hr
-    dataroot_lq: ./data/Flickr1024/Stereo_test/KITTI2015/lr_x4
+    dataroot_gt: /home/h11ssl-i/data/Stereo_test/KITTI2015/hr
+    dataroot_lq: /home/h11ssl-i/data/Stereo_test/KITTI2015/lr_x4
     io_backend:
       type: disk
     
   test2:
     name: Middlebury
     type: PairedStereoImageDataset
-    dataroot_gt: ./data/Flickr1024/Stereo_test/Middlebury/hr
-    dataroot_lq: ./data/Flickr1024/Stereo_test/Middlebury/lr_x4
+    dataroot_gt: /home/h11ssl-i/data/Stereo_test/Middlebury/hr
+    dataroot_lq: /home/h11ssl-i/data/Stereo_test/Middlebury/lr_x4
     io_backend:
       type: disk
   
   test3:
     name: Flickr1024
     type: PairedStereoImageDataset
-    dataroot_gt: ./data/Flickr1024/Stereo_test/Flickr1024/hr
-    dataroot_lq: ./data/Flickr1024/Stereo_test/Flickr1024/lr_x4
+    dataroot_gt: /home/h11ssl-i/data/Stereo_test/Flickr1024/hr
+    dataroot_lq: /home/h11ssl-i/data/Stereo_test/Flickr1024/lr_x4
     io_backend:
       type: disk
 
@@ -58,7 +58,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: ./NTIRE2023StereoSR/experiments/CVHSSR-T_x4/models/net_g_latest.pth
+  pretrain_network_g: /home/h11ssl-i/zwb/CVHSSR/pre_train_ckpt/CVHSSR_Tx4.pth
   strict_load_g: true
   resume_state: ~
 
@@ -72,14 +72,14 @@ val:
       type: calculate_psnr
       crop_border: 0
       test_y_channel: false
-    ssim:
-      type: calculate_skimage_ssim
+    # ssim:
+    #   type: calculate_skimage_ssim
     psnr_left: # metric name, can be arbitrary
       type: calculate_psnr_left
       crop_border: 0
       test_y_channel: false
-    ssim_left:
-      type: calculate_skimage_ssim_left
+    # ssim_left:
+    #   type: calculate_skimage_ssim_left
 
   
 # dist training settings
